@@ -1,0 +1,46 @@
+.product
+  max-width: 500px
+  margin: auto
+  & img
+    z-index: 1
+
+.product-container
+  position: relative
+  padding: 2em
+  background: #fff
+  border-top-left-radius: 30px
+  border-top-right-radius: 30px
+  margin-top: -2em
+  z-index: 2
+
+  & .title
+    font-weight: 600
+    margin: 0
+    font-size: 1.75rem
+
+  & .price
+    font-weight: 400
+    font-size: 1.25rem
+
+  & .line
+    margin: 1em auto 1em
+
+  & .row:first-of-type
+    margin-bottom: 1em
+
+  & .control,
+  & .control-indicator
+    font-size: .75rem
+
+  & .control-indicator
+    background-color: #fff
+    background-image: url("../img/icons/add.svg")
+
+.toppings
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+.topping
+  margin-bottom: 1em
+  width: 50%

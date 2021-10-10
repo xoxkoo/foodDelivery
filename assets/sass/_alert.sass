@@ -1,0 +1,93 @@
+//.alert-container
+//  border: 1px solid black
+//  border-radius: 10px
+//  padding: 1em
+
+.alert
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background: $color_success
+  border: $border_width solid $color_light
+  border-radius: 1.5rem
+
+  position: fixed
+  bottom: 4rem
+  left: 50%
+  transform: translate(-50%, 50px)
+
+  width: 100%
+  max-width: 500px
+  min-height: 4rem
+  padding: .5em 1em
+
+  opacity: 0
+  z-index: -1
+  transition: all .75s ease-in-out
+
+  & .item-icon:first-of-type
+    margin-right: .5em
+  & .cross-icon
+    &:hover,
+    &:focus
+      background: $color_light
+      border-color: darken($color_light, 10)
+
+  & .col
+    text-align: center
+
+  & p
+    margin: .5em 0
+
+.cart-box
+  color: #fff
+  background: $color_primary
+  border: 2px solid lighten($color_primary, 50)
+  & .cross-icon
+    &:hover,
+    &:focus
+      background: lighten($color_primary, 20)
+    & path
+      fill: #fff
+
+  & .cart-items
+    //display: none
+    &::after
+      content: attr(data-items)
+
+.cart-box-sm
+  width: 10rem
+  height: 4rem
+  padding: .75em 1em
+  border-radius: 1.5rem
+  position: fixed
+  right: -3.5rem
+  left: unset
+  bottom: 4rem
+
+  & .cross-icon
+    display: none
+
+.hidden
+  transform: translate(-50%, 50px)
+  opacity: 0
+  z-index: -1
+
+.added
+  transform: translate(-50%, 0)
+  opacity: 1
+  z-index: 999
+
+$colors: ( "warning": $color_warning, "success": $color_success, "error": $color_error )
+
+@each $name,$color in $colors
+  .alert-#{$name}
+    background: $color
+    color: darken($color, 50)
+    border-color: darken($color, 15)
+    box-shadow: 0 0 2rem .75rem transparentize($color, .6)
+    & .cross-icon
+      &:hover,
+      &:focus
+        background: lighten($color, 17)
+        border-color: darken($color, 10)

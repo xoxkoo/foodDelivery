@@ -1,0 +1,72 @@
+.items-container
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+
+  & .item
+    display: flex
+    padding: 1em
+    width: 100%
+    max-width: 500px
+    height: 8rem
+    background: #fff
+    border: $border_width solid $color_light
+    border-radius: 2rem
+    margin: 0 auto 2em
+
+  & img
+    background: $color_light
+    border-radius: 1rem
+    height: 100%
+    width: 5rem
+
+  & .item-img
+    margin-right: .5em
+
+  & .add-icon
+    font-size: 1rem
+    padding: .25em 1em
+    border-radius: .7rem
+    display: flex
+    justify-content: center
+    align-items: center
+    //padding: 0
+
+    & path
+      stroke: #fff
+
+    &:hover
+      & svg
+        transform: rotate(90deg)
+
+  & .icon-group
+    margin-left: auto
+
+.col.icon-group
+  align-items: flex-end
+
+.saved .heart-icon path
+  fill: $color_heart
+  stroke: $color_heart
+
+.item-name
+  margin: 0
+  font-size: 1rem
+
+.item-price
+  margin: .5em 0 0
+  font-size: .8rem
+
+.categories
+  &.row
+    justify-content: center
+
+  & .category
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 2em 4em
+    width: 6rem
+    height: 2.5rem
+    border-radius: 2rem
+    font-size: .7rem

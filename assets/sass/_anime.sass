@@ -1,0 +1,94 @@
+.heart-an svg
+  animation: heart-an .5s forwards
+
+.heart-remove-an svg
+  animation: heart-remove-an .5s forwards
+
+.fadeOut
+  animation: fadeOut-an 1s forwards ease-in-out
+
+.fadeIn
+  animation: fadeIn-an 1s forwards ease-in-out
+
+.add-an
+  animation: add-an .5s forwards ease-in-out
+
+.bounce
+  animation: 1s bounce alternate 1
+
+
+@keyframes bounce
+  0%, 20%, 60%, 100%
+    transform: translateY(0)
+  40%
+    transform: translateY(-15px)
+  80%
+    transform: translateY(-5px)
+
+@keyframes add-an
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.1)
+  100%
+    transform: scale(1)
+
+@keyframes fadeOut-an
+  10%
+    transform: translateX(20px)
+
+  60%
+    opacity: 0
+    transform: translateX(-290px)
+
+  100%
+    opacity: 0
+    transform: scale(0)
+    position: absolute
+
+@keyframes fadeIn-an
+  10%
+    opacity: 0
+    transform: translateX(290px)
+
+  60%
+    opacity: 1
+    transform: translateX(-20px)
+
+  100%
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes heart-an
+  0%
+    fill: none
+    stroke: #000
+
+  25%
+    transform: scale(.9)
+
+  70%
+    fill: transparentize($color_heart, .5)
+    stroke: transparentize($color_heart, .5)
+    transform: scale(1.15)
+
+  100%
+    fill: $color_heart
+    stroke: $color_heart
+    transform: scale(1)
+
+@keyframes heart-remove-an
+  0%
+    fill: $color_heart
+    stroke: $color_heart
+
+  40%
+    fill: transparentize($color_heart, .5)
+    stroke: transparentize($color_heart, .5)
+    //transform: scale(.85) translateX(1px)
+    transform: scale(.85)
+
+  100%
+    fill: none
+    stroke: #000
+    transform: scale(1)

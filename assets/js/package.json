@@ -1,0 +1,11 @@
+{
+  "name": "food_delivery",
+  "version": "1.0.0",
+  "main": "/assets/js/script.js",
+  "author": "Tony",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "detect-autofill": "^1.1.4"
+  }
+}

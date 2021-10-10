@@ -1,0 +1,118 @@
+form
+  margin: 0 auto
+  max-width: 500px
+  & .btn
+    margin-top: 2em
+    margin-bottom: 1em
+
+//select
+//  font-size: 1.1rem
+//  font-family: 'Poppins', sans-serif
+//  color: $color_dark
+//  padding: 1em .5em
+//  width: 100%
+//  border:  1px solid $color_dark
+//  border-radius: 0
+//  cursor: pointer
+//
+//  &:focus
+//    outline: 0
+//    border-color: $color_primary
+
+textarea
+  height: 6rem
+  min-height: 4rem
+  resize: none
+
+.form-group input,
+.form-group textarea,
+.form-group select
+  font-family: $font-main
+  font-size: 1rem
+  background: #fff no-repeat calc(100% - 1em) 50%
+  background-size: 27px
+  border: 2px solid $color_light
+  border-radius: 1.2rem
+
+  color: #000
+  width: 100%
+  padding: 1em 2.5em 1em 1em
+  transition: .3s
+
+  &:focus
+    box-shadow: 0 0 24px 0 $color_light
+    outline: none
+    border-color: darken($color_light, 10)
+
+.form-inline
+  display: flex
+  justify-content: space-between
+  margin: 3em auto 0
+
+.form-group
+  width: 100%
+  position: relative
+  margin: 3em auto 0
+
+.form-inline .form-group
+  width: 45%
+  margin: 0
+
+.label-icon
+  height: 1.5rem
+  right: 1em
+  & svg
+    height: 1.5rem
+
+.label
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  transition: .2s
+  &.label-active
+    top: 0
+    transform: translateY(-110%)
+
+  &.label-filled
+    left: 0
+    opacity: .6
+
+.label-text
+  left: 1.2em
+  //font-weight: bold
+
+.label-textarea
+  top: 2em
+
+.select select
+  font-size: 0.9rem
+  height: 100%
+  background: #fff
+
+.order
+  & .valid select,
+  & .valid input
+    border-color: transparentize($color_success, .6)
+
+  & .valid input
+    background-image: url("../img/icons/emoji-happy.svg")
+
+  & .invalid select,
+  & .invalid input
+    border-color: transparentize($color_error, .6)
+
+  & .invalid input
+    background-image: url("../img/icons/emoji-sad.svg")
+
+  & .invalid .input-error
+    display: block
+
+  & .input-error
+    display: none
+    left: 100%
+    transform: translate(-100%, 50%)
+    font-size: .85rem
+    color: $color_error
+    bottom: -1em
+    width: 100%
+    width: fit-content

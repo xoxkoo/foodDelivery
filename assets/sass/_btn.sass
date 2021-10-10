@@ -1,0 +1,88 @@
+$btn_colors: ( "light": #fff, "dark": $color_dark, "primary": $color_primary, "secondary": $color_secondary, "delete": $color_error  )
+
+.btn
+  font-size: 1.2rem
+  color: #000
+  border: 0
+  border-radius: 1.3rem
+
+  display: flex
+  justify-content: center
+
+  width: max-content
+  margin: auto
+  padding: .8em 2.25em
+  cursor: pointer
+  transition: .35s
+
+  & svg
+    margin-right: .5em
+    height: 1.25rem
+    width: auto
+
+@each $name,$color in $btn_colors
+  .btn-#{$name}
+    background: $color
+    border: $border_width solid $color
+
+    &:focus,
+    &:hover
+      box-shadow: 0 0 1.5rem .05rem transparentize($color, .7)
+      border: $border_width solid $color
+      background: lighten($color, 7)
+
+.btn-primary
+  color: #fff
+
+.btn-add
+  line-height: 1.5rem
+  -webkit-text-size-adjust: none
+  -moz-text-size-adjust: none
+  -ms-text-size-adjust: none
+  font-size: 1rem
+  border-radius: 1.25rem
+  border: $border_width solid transparent
+  padding: 0
+  margin: 0
+  width: 1.65rem
+  height: 1.5rem
+  display: flex
+  justify-content: center
+  cursor: pointer
+
+.btn-sm
+  font-size: .95rem
+  margin-left: 0
+
+.btn-lg
+  width: 100%
+  padding: 1em 0
+  margin: 1.75em auto
+
+.btn-border
+  border: $border_width solid $color_light
+  background: #fff
+  transition: .35s
+  &:hover,
+  &:focus
+    border-color: darken($color_light, 10)
+    background: lighten($color_light, 10)
+
+.btn-transparent
+  background: transparentize($color_bg, .25)
+  margin: 0
+  &:hover,
+  &:focus
+    outline: 0
+    background: transparentize($color_bg, .05)
+
+.btn-back
+  background: none
+
+button:disabled,
+button[disabled]
+  background: lighten($color_grey, 17)
+
+  &:hover,
+  &:focus
+    background: lighten($color_grey, 17)

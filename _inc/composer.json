@@ -1,0 +1,14 @@
+{
+    "require": {
+        "tamtamchik/simple-flash": "^2.0",
+        "ext-json": "*",
+        "catfan/medoo": "^1.7",
+        "cartalyst/sentinel": "^5.0",
+        "illuminate/database": "^8.51",
+        "illuminate/events": "^8.51",
+        "symfony/http-foundation": "^5.3"
+    },
+    "require-dev": {
+        "filp/whoops": "^2.7"
+    }
+}
