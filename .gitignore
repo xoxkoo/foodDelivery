@@ -4,3 +4,4 @@ assets/js/node_modules
 _mysql
 _inc/bower_components
 favicon_io
+.gitignore
